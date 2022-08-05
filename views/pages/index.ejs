@@ -1,0 +1,49 @@
+<html>
+<head>
+    <link rel="stylesheet" href="/css/bootstrap.min.css" />
+
+    <style>
+        main{
+            min-height: 90vh;
+        }
+    </style>
+</head>
+<body>
+
+    <%- include('../partials/header', {title: "Welcome to Bangkokok ATM Machine"}) %>
+    
+    <main class="body-dashboard d-flex align-items-center" style="background-image: linear-gradient(to right, #141E30, #243B55);">
+        
+        <div class="" style="flex: 1">
+            
+        <form action="/login" method="post" class="form-login text-center d-flex justify-content-center text-white" >
+            
+            <div class="container-login col-xl-3 col-lg-4 col-sm-6 d-flex flex-column text-light p-4 bg-dark">
+                <em class="text-muted">
+                    *NOTE <br>
+                    You may use the below account for testing, or you may also to register a new account. Thanks
+<pre>
+
+username: admin
+password: admin
+
+username2: user
+password2: password
+</pre>
+                                    </em>
+                <p class="text-danger"><%= error_message %> </p>
+                <input type="text" class="login-username p-2 text-center mb-2 mt-4" placeholder="Enter Username" name="username" required>
+                <input type="password" class="login-password p-2 text-center mb-2 mt-2" placeholder="Enter Password" name="password" required>
+                <button type="submit" class="login btn btn btn-success mt-4">Login</button>
+
+                <p class="mt-5 mb-3 text-lg">No account yet? <a href="/register">Sign up</a></p>
+
+                    
+            </div>
+
+        </form>
+        </div>
+    </main>
+</body>
+</html>
+
